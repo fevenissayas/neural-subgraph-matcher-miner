@@ -4,7 +4,7 @@ env/
 log/
 log-*/
 *.p
-*.png
+# *.png
 plots/
 data/
 runs/
@@ -13,3 +13,4 @@ results/
 orca/
 core
 deepsnap-experimental/
+.venv/
