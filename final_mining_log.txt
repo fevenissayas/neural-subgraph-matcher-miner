@@ -1,0 +1,295 @@
+/home/feven/Desktop/neural-subgraph-matcher-miner/subgraph_mining/decoder.py:59: UserWarning: 
+This call to matplotlib.use() has no effect because the backend has already
+been chosen; matplotlib.use() must be called *before* pylab, matplotlib.pyplot,
+or matplotlib.backends is imported for the first time.
+
+The backend was *originally* set to 'TkAgg' by the following code:
+  File "/home/feven/.pyenv/versions/3.7.12/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/home/feven/.pyenv/versions/3.7.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/feven/Desktop/neural-subgraph-matcher-miner/subgraph_mining/decoder.py", line 52, in <module>
+    from subgraph_mining.search_agents import (
+  File "/home/feven/Desktop/neural-subgraph-matcher-miner/subgraph_mining/search_agents.py", line 27, in <module>
+    import matplotlib.pyplot as plt
+  File "/home/feven/Desktop/neural-subgraph-matcher-miner/.venv/lib/python3.7/site-packages/matplotlib/pyplot.py", line 72, in <module>
+    from matplotlib.backends import pylab_setup
+  File "/home/feven/Desktop/neural-subgraph-matcher-miner/.venv/lib/python3.7/site-packages/matplotlib/backends/__init__.py", line 14, in <module>
+    line for line in traceback.format_stack()
+
+
+  matplotlib.use('Agg')  # Non-interactive backend
+2026-03-04 10:53:52,188 - INFO - Ensured directory exists: plots
+2026-03-04 10:53:52,189 - INFO - Ensured directory exists: plots/cluster
+2026-03-04 10:53:52,189 - INFO - Ensured directory exists: results
+2026-03-04 10:53:52,191 - INFO - Decoder config: min_pattern_size=3 max_pattern_size=5 out_batch_size=3 (pattern sizes 3..5 inclusive, up to 3 per size)
+2026-03-04 10:53:52,192 - INFO - Using dataset: data/wiki-vote.pkl
+2026-03-04 10:53:52,192 - INFO - Graph type: directed
+2026-03-04 10:53:52,761 - INFO - Created directed graph from dict format with 7115 nodes and 103689 edges
+2026-03-04 10:53:52,762 - INFO - 
+Starting pattern mining...
+2026-03-04 10:53:52,762 - INFO - Adaptive Mode: Standard Sequential Processing.
+2026-03-04 10:53:52,762 - INFO - Ensured directory exists: plots
+2026-03-04 10:53:52,762 - INFO - Ensured directory exists: plots/cluster
+2026-03-04 10:53:52,762 - INFO - Ensured directory exists: results
+2026-03-04 10:53:52,782 - INFO - 1 graphs
+2026-03-04 10:53:52,783 - INFO - Search strategy: greedy
+2026-03-04 10:53:52,783 - INFO - Graph type: directed
+  0%|          | 0/100 [00:00<?, ?it/s][MINER_PROGRESS] phase=sampling current=1 total=100 percent=1
+[MINER_PROGRESS] phase=sampling current=2 total=100 percent=2
+[MINER_PROGRESS] phase=sampling current=3 total=100 percent=3
+[MINER_PROGRESS] phase=sampling current=4 total=100 percent=4
+[MINER_PROGRESS] phase=sampling current=5 total=100 percent=5
+[MINER_PROGRESS] phase=sampling current=6 total=100 percent=6
+[MINER_PROGRESS] phase=sampling current=7 total=100 percent=7
+[MINER_PROGRESS] phase=sampling current=8 total=100 percent=8
+[MINER_PROGRESS] phase=sampling current=9 total=100 percent=9
+[MINER_PROGRESS] phase=sampling current=10 total=100 percent=10
+[MINER_PROGRESS] phase=sampling current=11 total=100 percent=11
+[MINER_PROGRESS] phase=sampling current=12 total=100 percent=12
+[MINER_PROGRESS] phase=sampling current=13 total=100 percent=13
+[MINER_PROGRESS] phase=sampling current=14 total=100 percent=14
+[MINER_PROGRESS] phase=sampling current=15 total=100 percent=15
+[MINER_PROGRESS] phase=sampling current=16 total=100 percent=16
+[MINER_PROGRESS] phase=sampling current=17 total=100 percent=17
+[MINER_PROGRESS] phase=sampling current=18 total=100 percent=18
+[MINER_PROGRESS] phase=sampling current=19 total=100 percent=19
+[MINER_PROGRESS] phase=sampling current=20 total=100 percent=20
+[MINER_PROGRESS] phase=sampling current=21 total=100 percent=21
+[MINER_PROGRESS] phase=sampling current=22 total=100 percent=22
+[MINER_PROGRESS] phase=sampling current=23 total=100 percent=23
+[MINER_PROGRESS] phase=sampling current=24 total=100 percent=24
+[MINER_PROGRESS] phase=sampling current=25 total=100 percent=25
+[MINER_PROGRESS] phase=sampling current=26 total=100 percent=26
+[MINER_PROGRESS] phase=sampling current=27 total=100 percent=27
+[MINER_PROGRESS] phase=sampling current=28 total=100 percent=28
+[MINER_PROGRESS] phase=sampling current=29 total=100 percent=28
+[MINER_PROGRESS] phase=sampling current=30 total=100 percent=30
+[MINER_PROGRESS] phase=sampling current=31 total=100 percent=31
+[MINER_PROGRESS] phase=sampling current=32 total=100 percent=32
+[MINER_PROGRESS] phase=sampling current=33 total=100 percent=33
+[MINER_PROGRESS] phase=sampling current=34 total=100 percent=34
+[MINER_PROGRESS] phase=sampling current=35 total=100 percent=35
+[MINER_PROGRESS] phase=sampling current=36 total=100 percent=36
+[MINER_PROGRESS] phase=sampling current=37 total=100 percent=37
+[MINER_PROGRESS] phase=sampling current=38 total=100 percent=38
+[MINER_PROGRESS] phase=sampling current=39 total=100 percent=39
+[MINER_PROGRESS] phase=sampling current=40 total=100 percent=40
+[MINER_PROGRESS] phase=sampling current=41 total=100 percent=41
+[MINER_PROGRESS] phase=sampling current=42 total=100 percent=42
+[MINER_PROGRESS] phase=sampling current=43 total=100 percent=43
+[MINER_PROGRESS] phase=sampling current=44 total=100 percent=44
+[MINER_PROGRESS] phase=sampling current=45 total=100 percent=45
+[MINER_PROGRESS] phase=sampling current=46 total=100 percent=46
+[MINER_PROGRESS] phase=sampling current=47 total=100 percent=47
+[MINER_PROGRESS] phase=sampling current=48 total=100 percent=48
+[MINER_PROGRESS] phase=sampling current=49 total=100 percent=49
+[MINER_PROGRESS] phase=sampling current=50 total=100 percent=50
+ 50%|█████     | 50/100 [00:00<00:00, 491.86it/s][MINER_PROGRESS] phase=sampling current=51 total=100 percent=51
+[MINER_PROGRESS] phase=sampling current=52 total=100 percent=52
+[MINER_PROGRESS] phase=sampling current=53 total=100 percent=53
+[MINER_PROGRESS] phase=sampling current=54 total=100 percent=54
+[MINER_PROGRESS] phase=sampling current=55 total=100 percent=55
+[MINER_PROGRESS] phase=sampling current=56 total=100 percent=56
+[MINER_PROGRESS] phase=sampling current=57 total=100 percent=56
+[MINER_PROGRESS] phase=sampling current=58 total=100 percent=57
+[MINER_PROGRESS] phase=sampling current=59 total=100 percent=59
+[MINER_PROGRESS] phase=sampling current=60 total=100 percent=60
+[MINER_PROGRESS] phase=sampling current=61 total=100 percent=61
+[MINER_PROGRESS] phase=sampling current=62 total=100 percent=62
+[MINER_PROGRESS] phase=sampling current=63 total=100 percent=63
+[MINER_PROGRESS] phase=sampling current=64 total=100 percent=64
+[MINER_PROGRESS] phase=sampling current=65 total=100 percent=65
+[MINER_PROGRESS] phase=sampling current=66 total=100 percent=66
+[MINER_PROGRESS] phase=sampling current=67 total=100 percent=67
+[MINER_PROGRESS] phase=sampling current=68 total=100 percent=68
+[MINER_PROGRESS] phase=sampling current=69 total=100 percent=69
+[MINER_PROGRESS] phase=sampling current=70 total=100 percent=70
+[MINER_PROGRESS] phase=sampling current=71 total=100 percent=71
+[MINER_PROGRESS] phase=sampling current=72 total=100 percent=72
+[MINER_PROGRESS] phase=sampling current=73 total=100 percent=73
+[MINER_PROGRESS] phase=sampling current=74 total=100 percent=74
+[MINER_PROGRESS] phase=sampling current=75 total=100 percent=75
+[MINER_PROGRESS] phase=sampling current=76 total=100 percent=76
+[MINER_PROGRESS] phase=sampling current=77 total=100 percent=77
+[MINER_PROGRESS] phase=sampling current=78 total=100 percent=78
+[MINER_PROGRESS] phase=sampling current=79 total=100 percent=79
+[MINER_PROGRESS] phase=sampling current=80 total=100 percent=80
+[MINER_PROGRESS] phase=sampling current=81 total=100 percent=81
+[MINER_PROGRESS] phase=sampling current=82 total=100 percent=82
+[MINER_PROGRESS] phase=sampling current=83 total=100 percent=83
+[MINER_PROGRESS] phase=sampling current=84 total=100 percent=84
+[MINER_PROGRESS] phase=sampling current=85 total=100 percent=85
+[MINER_PROGRESS] phase=sampling current=86 total=100 percent=86
+[MINER_PROGRESS] phase=sampling current=87 total=100 percent=87
+[MINER_PROGRESS] phase=sampling current=88 total=100 percent=88
+[MINER_PROGRESS] phase=sampling current=89 total=100 percent=89
+[MINER_PROGRESS] phase=sampling current=90 total=100 percent=90
+[MINER_PROGRESS] phase=sampling current=91 total=100 percent=91
+[MINER_PROGRESS] phase=sampling current=92 total=100 percent=92
+[MINER_PROGRESS] phase=sampling current=93 total=100 percent=93
+[MINER_PROGRESS] phase=sampling current=94 total=100 percent=94
+[MINER_PROGRESS] phase=sampling current=95 total=100 percent=95
+[MINER_PROGRESS] phase=sampling current=96 total=100 percent=96
+[MINER_PROGRESS] phase=sampling current=97 total=100 percent=97
+[MINER_PROGRESS] phase=sampling current=98 total=100 percent=98
+[MINER_PROGRESS] phase=sampling current=99 total=100 percent=99
+[MINER_PROGRESS] phase=sampling current=100 total=100 percent=100
+100%|██████████| 100/100 [00:00<00:00, 507.39it/s]
+2026-03-04 10:53:53,001 - WARNING - Number of graphs not multiple of batch size
+2026-03-04 10:53:53,231 - INFO - Initializing greedy search agent...
+2026-03-04 10:53:53,231 - INFO - Running search with 1 trials... (out_batch_size=3)
+Rank Method: counts
+Using 4 worker processes for parallel search.
+Starting 1 search trials on 4 cores...
+[10:53:57] Worker PID 171429 initializing...
+[10:53:57] Worker PID 171429 initialization complete.
+[10:54:01] Worker PID 171466 initializing...
+[10:54:01] Worker PID 171466 initialization complete.
+[10:54:04] Worker PID 171500 initializing...
+[10:54:04] Worker PID 171500 initialization complete.
+  0%|          | 0/1 [00:00<?, ?it/s][10:54:08] Worker PID 171534 initializing...
+[10:54:08] Worker PID 171534 initialization complete.
+[MINER_PROGRESS] phase=search_trials current=1 total=1 percent=100
+100%|██████████| 1/1 [00:03<00:00,  3.65s/it]100%|██████████| 1/1 [00:03<00:00,  3.65s/it]/home/feven/Desktop/neural-subgraph-matcher-miner/subgraph_mining/decoder.py:59: UserWarning: 
+This call to matplotlib.use() has no effect because the backend has already
+been chosen; matplotlib.use() must be called *before* pylab, matplotlib.pyplot,
+or matplotlib.backends is imported for the first time.
+
+The backend was *originally* set to 'TkAgg' by the following code:
+  File "<string>", line 1, in <module>
+  File "/home/feven/.pyenv/versions/3.7.12/lib/python3.7/multiprocessing/spawn.py", line 105, in spawn_main
+    exitcode = _main(fd)
+  File "/home/feven/.pyenv/versions/3.7.12/lib/python3.7/multiprocessing/spawn.py", line 114, in _main
+    prepare(preparation_data)
+  File "/home/feven/.pyenv/versions/3.7.12/lib/python3.7/multiprocessing/spawn.py", line 223, in prepare
+    _fixup_main_from_name(data['init_main_from_name'])
+  File "/home/feven/.pyenv/versions/3.7.12/lib/python3.7/multiprocessing/spawn.py", line 249, in _fixup_main_from_name
+    alter_sys=True)
+  File "/home/feven/.pyenv/versions/3.7.12/lib/python3.7/runpy.py", line 205, in run_module
+    return _run_module_code(code, init_globals, run_name, mod_spec)
+  File "/home/feven/.pyenv/versions/3.7.12/lib/python3.7/runpy.py", line 96, in _run_module_code
+    mod_name, mod_spec, pkg_name, script_name)
+  File "/home/feven/.pyenv/versions/3.7.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/feven/Desktop/neural-subgraph-matcher-miner/subgraph_mining/decoder.py", line 52, in <module>
+    from subgraph_mining.search_agents import (
+  File "/home/feven/Desktop/neural-subgraph-matcher-miner/subgraph_mining/search_agents.py", line 27, in <module>
+    import matplotlib.pyplot as plt
+  File "/home/feven/Desktop/neural-subgraph-matcher-miner/.venv/lib/python3.7/site-packages/matplotlib/pyplot.py", line 72, in <module>
+    from matplotlib.backends import pylab_setup
+  File "/home/feven/Desktop/neural-subgraph-matcher-miner/.venv/lib/python3.7/site-packages/matplotlib/backends/__init__.py", line 14, in <module>
+    line for line in traceback.format_stack()
+
+
+  matplotlib.use('Agg')  # Non-interactive backend
+/home/feven/Desktop/neural-subgraph-matcher-miner/subgraph_mining/decoder.py:59: UserWarning: 
+This call to matplotlib.use() has no effect because the backend has already
+been chosen; matplotlib.use() must be called *before* pylab, matplotlib.pyplot,
+or matplotlib.backends is imported for the first time.
+
+The backend was *originally* set to 'TkAgg' by the following code:
+  File "<string>", line 1, in <module>
+  File "/home/feven/.pyenv/versions/3.7.12/lib/python3.7/multiprocessing/spawn.py", line 105, in spawn_main
+    exitcode = _main(fd)
+  File "/home/feven/.pyenv/versions/3.7.12/lib/python3.7/multiprocessing/spawn.py", line 114, in _main
+    prepare(preparation_data)
+  File "/home/feven/.pyenv/versions/3.7.12/lib/python3.7/multiprocessing/spawn.py", line 223, in prepare
+    _fixup_main_from_name(data['init_main_from_name'])
+  File "/home/feven/.pyenv/versions/3.7.12/lib/python3.7/multiprocessing/spawn.py", line 249, in _fixup_main_from_name
+    alter_sys=True)
+  File "/home/feven/.pyenv/versions/3.7.12/lib/python3.7/runpy.py", line 205, in run_module
+    return _run_module_code(code, init_globals, run_name, mod_spec)
+  File "/home/feven/.pyenv/versions/3.7.12/lib/python3.7/runpy.py", line 96, in _run_module_code
+    mod_name, mod_spec, pkg_name, script_name)
+  File "/home/feven/.pyenv/versions/3.7.12/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/feven/Desktop/neural-subgraph-matcher-miner/subgraph_mining/decoder.py", line 52, in <module>
+    from subgraph_mining.search_agents import (
+  File "/home/feven/Desktop/neural-subgraph-matcher-miner/subgraph_mining/search_agents.py", line 27, in <module>
+    import matplotlib.pyplot as plt
+  File "/home/feven/Desktop/neural-subgraph-matcher-miner/.venv/lib/python3.7/site-packages/matplotlib/pyplot.py", line 72, in <module>
+    from matplotlib.backends import pylab_setup
+  File "/home/feven/Desktop/neural-subgraph-matcher-miner/.venv/lib/python3.7/site-packages/matplotlib/backends/__init__.py", line 14, in <module>
+    line for line in traceback.format_stack()
+
+
+  matplotlib.use('Agg')  # Non-interactive backend
+
+2026-03-04 10:54:12,330 - INFO - Total time: 19.57s (0m 19s)
+2026-03-04 10:54:12,330 - INFO - Size 3: 1 unique pattern types (requested up to 3)
+2026-03-04 10:54:12,330 - INFO - Size 4: 1 unique pattern types (requested up to 3)
+2026-03-04 10:54:12,331 - INFO - Size 5: 1 unique pattern types (requested up to 3)
+2026-03-04 10:54:12,331 - INFO - 
+Saving all pattern instances...
+2026-03-04 10:54:12,331 - INFO - ======================================================================
+2026-03-04 10:54:12,331 - INFO - SAVING AND VISUALIZING ALL PATTERN INSTANCES
+2026-03-04 10:54:12,331 - INFO - ======================================================================
+2026-03-04 10:54:12,331 - INFO - Agent has dataset attribute with 1 graphs
+2026-03-04 10:54:12,342 - INFO - Graph context created: {'num_graphs': 1, 'total_nodes': 7115, 'total_edges': 103689, 'graph_types': ['directed'], 'sampling_trials': 1, 'neighborhoods_sampled': 100, 'sample_method': 'tree', 'min_pattern_size': 3, 'max_pattern_size': 5}
+2026-03-04 10:54:12,342 - INFO - Agent.counts has 3 size categories
+2026-03-04 10:54:12,342 - INFO - save_and_visualize: using out_batch_size=3 (up to 3 patterns per size)
+2026-03-04 10:54:12,342 - INFO - Size 3: 1 unique pattern types (taking up to 3)
+2026-03-04 10:54:12,342 - INFO -   size_3_rank_1: 1 instances
+2026-03-04 10:54:12,342 - INFO - Processing directed graph with 3 nodes and 2 edges
+2026-03-04 10:54:12,343 - INFO - Extracting graph data from NetworkX object...
+2026-03-04 10:54:12,351 - INFO - Graph data extraction completed successfully
+2026-03-04 10:54:12,351 - INFO - Generating HTML visualization...
+2026-03-04 10:54:12,361 - INFO - HTML visualization created successfully: /home/feven/Desktop/neural-subgraph-matcher-miner/plots/cluster/dir_3-1_nodes-Node_edges-VOTED_FOR_anchored_dense_interactive.html
+2026-03-04 10:54:12,361 - INFO - Interactive graph visualization completed successfully
+2026-03-04 10:54:12,362 - INFO -     ✓ Visualized size_3_rank_1
+Aggregating results from all worker processes...
+Ranking patterns of size 3 using method: 'counts'
+Ranking patterns of size 4 using method: 'counts'
+Ranking patterns of size 5 using method: 'counts'
+[MINER_PROGRESS] phase=saving current=1 total=3 percent=33
+2026-03-04 10:54:12,362 - INFO - Size 4: 1 unique pattern types (taking up to 3)
+2026-03-04 10:54:12,362 - INFO -   size_4_rank_1: 1 instances
+2026-03-04 10:54:12,362 - INFO - Processing directed graph with 4 nodes and 4 edges
+2026-03-04 10:54:12,362 - INFO - Extracting graph data from NetworkX object...
+2026-03-04 10:54:12,370 - INFO - Graph data extraction completed successfully
+2026-03-04 10:54:12,370 - INFO - Generating HTML visualization...
+2026-03-04 10:54:12,377 - INFO - HTML visualization created successfully: /home/feven/Desktop/neural-subgraph-matcher-miner/plots/cluster/dir_4-1_nodes-Node_edges-VOTED_FOR_anchored_dense_interactive.html
+2026-03-04 10:54:12,378 - INFO - Interactive graph visualization completed successfully
+2026-03-04 10:54:12,378 - INFO -     ✓ Visualized size_4_rank_1
+[MINER_PROGRESS] phase=saving current=2 total=3 percent=66
+2026-03-04 10:54:12,378 - INFO - Size 5: 1 unique pattern types (taking up to 3)
+2026-03-04 10:54:12,378 - INFO -   size_5_rank_1: 1 instances
+2026-03-04 10:54:12,378 - INFO - Processing directed graph with 5 nodes and 5 edges
+2026-03-04 10:54:12,378 - INFO - Extracting graph data from NetworkX object...
+2026-03-04 10:54:12,386 - INFO - Graph data extraction completed successfully
+2026-03-04 10:54:12,386 - INFO - Generating HTML visualization...
+2026-03-04 10:54:12,394 - INFO - HTML visualization created successfully: /home/feven/Desktop/neural-subgraph-matcher-miner/plots/cluster/dir_5-1_nodes-Node_edges-VOTED_FOR_anchored_sparse_interactive.html
+2026-03-04 10:54:12,395 - INFO - Interactive graph visualization completed successfully
+2026-03-04 10:54:12,395 - INFO -     ✓ Visualized size_5_rank_1
+[MINER_PROGRESS] phase=saving current=3 total=3 percent=100
+2026-03-04 10:54:12,395 - INFO - Ensured directory exists: plots
+2026-03-04 10:54:12,395 - INFO - Ensured directory exists: plots/cluster
+2026-03-04 10:54:12,395 - INFO - Ensured directory exists: results
+2026-03-04 10:54:12,396 - INFO - Saving to: results/wiki_motifs_fast_all_instances.pkl
+2026-03-04 10:54:12,398 - INFO - JSON saved to: results/wiki_motifs_fast_all_instances.json
+2026-03-04 10:54:12,398 - INFO - JSON saved to: results/wiki_motifs_fast_all_instances.json
+2026-03-04 10:54:12,398 - INFO - ✓ PKL file created successfully (1.7 KB)
+2026-03-04 10:54:12,552 - INFO - ======================================================================
+2026-03-04 10:54:12,552 - INFO - ✓ COMPLETE
+2026-03-04 10:54:12,552 - INFO - ======================================================================
+2026-03-04 10:54:12,552 - INFO - PKL file: results/wiki_motifs_fast_all_instances.pkl
+2026-03-04 10:54:12,552 - INFO -   Pattern types: 3
+2026-03-04 10:54:12,552 - INFO -   Total discoveries: 3
+2026-03-04 10:54:12,553 - INFO -   Unique instances: 3
+2026-03-04 10:54:12,553 - INFO -   Duplicates removed: 0
+2026-03-04 10:54:12,553 - INFO -   Duplication rate: 0.0%
+2026-03-04 10:54:12,553 - INFO - HTML visualizations: plots/cluster/
+2026-03-04 10:54:12,553 - INFO -   Successfully created: 3 files
+2026-03-04 10:54:12,553 - INFO - ======================================================================
+2026-03-04 10:54:12,553 - INFO - ✓ All instances saved to: results/wiki_motifs_fast_all_instances.pkl
+2026-03-04 10:54:12,554 - INFO - Ensured directory exists: plots
+2026-03-04 10:54:12,554 - INFO - Ensured directory exists: plots/cluster
+2026-03-04 10:54:12,554 - INFO - Ensured directory exists: results
+2026-03-04 10:54:12,554 - INFO - 
+Saving representative patterns to: results/wiki_motifs_fast.json
+2026-03-04 10:54:12,555 - INFO - ✓ Representatives saved (1.2 KB)
+2026-03-04 10:54:12,556 - INFO - ✓ JSON version saved to: results/wiki_motifs_fast.json
+2026-03-04 10:54:12,664 - INFO - 
+✓ Pattern mining complete!
+Added graph context to JSON results
