@@ -45,6 +45,49 @@ In a directed voting network, motifs represent political dynamics, influence, an
 1. **Text Features:** Wikipedia votes often come with a "reason" comment. SPMiner could be improved by using NLP sentiment analysis (e.g., classifying text into positive, negative, or neutral) to weight the edges. A positive sentiment vote means support, whereas a negative sentiment vote means opposition.
 2. **Temporal Features:** Votes happen at specific timestamps (captured historically until January 2008). Motif mining could be improved by looking at *when* a cluster of votes occurs. Incorporating time-windows would allow SPMiner to catch "sudden campaigns" or anomalous voting spikes over short periods that static structural graphs miss.
 
-## 4. Hyper-Parameter Sensitivity Analysis
-- Expanding motif sizes up to 10 significantly expands the search space but effectively reveals massive administrative voting blocs.
-- Modifying neighborhood sample radius to 3+ successfully captures deep hierarchical voting dependencies.
+## 4. Comparative Strategy & Hyperparameter Analysis
+
+Three search strategies were evaluated across three configurations (small, medium, large) varying `n_trials` (2 / 5 / 10) and `n_neighborhoods` (50 / 100 / 200). All plots are saved to `results/experiments/strategy_comparison.png`.
+
+### Results Table
+
+| Config | Strategy | Trials | Nbhds | Runtime (s) | Patterns Found |
+|---|---|---|---|---|---|
+| greedy_small  | GREEDY | 2  | 50  | 10.45 | 3 |
+| greedy_medium | GREEDY | 5  | 100 | 12.08 | 8 |
+| greedy_large  | GREEDY | 10 | 200 | 12.82 | **9 ★** |
+| mcts_small    | MCTS   | 2  | 50  | **2.32 ★** | 2 |
+| mcts_medium   | MCTS   | 5  | 100 | 3.17  | 3 |
+| mcts_large    | MCTS   | 10 | 200 | 3.35  | 8 |
+| beam_small    | BEAM   | 2  | 50  | 3.79  | 1 |
+| beam_medium   | BEAM   | 5  | 100 | 6.65  | 2 |
+| beam_large    | BEAM   | 10 | 200 | 6.29  | 1 |
+
+### Strategy Analysis
+
+- **Greedy** is the slowest strategy due to its multiprocessing pool overhead per trial, but it consistently finds the highest number of unique patterns as neighborhoods and trials increase. It saturates the embedding space most thoroughly.
+- **MCTS** is the fastest (2.32s at small config) with low overhead and scales well — reaching 8 patterns at the large config — making it a strong candidate for rapid exploratory runs.
+- **Beam** is the most conservative: it maintains only a fixed-width set of candidate patterns at each step, sacrificing diversity for stability. It finds fewer patterns regardless of configuration, peaking at just 2 in the medium config.
+
+### Best Configuration: `greedy_large`
+
+With `n_trials=10` and `n_neighborhoods=200`, Greedy discovered **9 unique patterns** across sizes 3, 4, and 5 — the highest count of any configuration. This reflects the deeper exploration of the social coalition structures in the Wiki-Vote network.
+
+### Best Algorithm: MCTS
+
+MCTS achieved near-Greedy pattern counts (8 patterns at large config) in **3.35s vs 12.82s** for Greedy — a **3.8x speedup**. For practical deployment on real-world social graphs at scale, MCTS offers the best accuracy-per-second tradeoff.
+
+## 5. HTML Visualization Interpretation
+
+SPMiner generates interactive HTML files for each discovered motif stored in `plots/cluster/`. For example:
+- `dir_3-1_nodes-Node_edges-VOTED_FOR_anchored_dense_interactive.html` — a 3-node dense motif
+- `dir_5-1_nodes-Node_edges-VOTED_FOR_anchored_sparse_interactive.html` — a 5-node sparse motif
+
+**How to read an HTML visualization:**
+- Each **circle (node)** represents a Wikipedia user involved in the motif. The node marked as `anchor=1` (usually highlighted) is the seed/anchor node that SPMiner used as its starting point during the greedy beam walk.
+- Each **arrow (directed edge)** labelled `VOTED_FOR` represents a vote cast from one user to another in the direction of the arrow.
+- **Dense motifs** (many edges relative to node count): Users are mutually voting for each other — indicating tight faction cliques or campaigning coalitions.
+- **Sparse motifs** (few edges relative to node count): Voting flows hierarchically along a chain — indicating an influential user's endorsement cascades down to less-known candidates.
+- The **metadata panel** displayed in the visualization shows the motif's node count, edge count, direction type, and its rank among patterns of the same size found during that run.
+
+Opening the HTML file in any browser renders a fully interactive network diagram you can drag, zoom, and hover over to inspect individual voter IDs.
